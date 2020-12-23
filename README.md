@@ -1,15 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+Monday, December 21, 2021
 
 ### Project Title
-Replace the Project Title
+Bike Share Analytics
 
 ### Description
-Describe what your project is about and what it does
+Analyzes Bike Share information for three cities: Chicago, Washington, D.C., and New York City
 
 ### Files used
-Include the files used
+bikeshare.py: Contains Python code
+chicago.csv: Contains Bike Share data for Chicago
+new_york_city.csv: Contains Bike Share data for New York
+washington.csv: Contains Bike Share data for Washington, D.C.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://stackoverflow.com/questions/6557553/get-month-name-from-number
+    How to convert month number to month name
