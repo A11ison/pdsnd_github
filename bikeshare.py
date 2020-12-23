@@ -107,21 +107,21 @@ while lets_analyze.lower() == 'yes':
         if city.lower() in ['chicago', 'new york city', 'washington']:
             break
         else:
-            print('Not a valid city, please enter Chicago, New York City, or Washington.')
+            print('Not a valid city, please try again.')
 
     while True:
         month = input('Enter a month from January through June, to analyze, or choose "All": ')
         if month.lower() in ['january', 'february', 'march', 'april', 'may', 'june','all']:
             break
         else:
-            print('Not a valid month, please enter a month from January through June or enter "All".')
+            print('Not a valid month, please try again.')
 
     while True:
         day = input('Enter a day of the week, Sunday through Saturday, to analyze, or choose "All": ')
         if day.lower() in ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday','saturday','all']:
             break
         else:
-            print('Not a valid day, please enter a day Sunday through Saturday, or enter "All".')
+            print('Not a valid day, please try again.')
 
     load_data(city, month, day)
 
