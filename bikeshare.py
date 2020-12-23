@@ -1,5 +1,5 @@
 #import relevant packages
-import time
+import time #needed to calculate program run time
 import pandas as pd
 import numpy as np
 import calendar #needed to convert month number to month name, found on Stackoverflow post: https://stackoverflow.com/questions/6557553/get-month-name-from-number
@@ -74,14 +74,14 @@ def load_data(city, month, day): #load chosen city, month and day into function
     user_count = df['User Type'].value_counts()
     print('Count of Each User Type: \n', user_count)
 
-    #calculate gender counts, if available
+    #calculate gender counts, only availabe in Chicago and New York City
     if city == 'chicago' or city == 'new york city':
         gender_count = df['Gender'].value_counts()
         print('Count of Each Gender: \n', gender_count)
     else:
         print('No Customer Gender Information for', city.title())
 
-    #calculate birth year stats, if available
+    #calculate birth year stats, only availabe in Chicago and New York City
     if city == 'chicago' or city == 'new york city':
         earliest_year = int(df['Birth Year'].min())
         latest_year = int(df['Birth Year'].max())
