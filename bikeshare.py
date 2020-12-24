@@ -38,30 +38,30 @@ def load_data(city, month, day): #load chosen city, month and day into function
         month = months.index(month) + 1
         df = df[df['month'] == month]
     else:
-        popular_month = df['month'].mode()[0]
-        popular_month = calendar.month_name[popular_month] #converting month number to month name
-        print('Most Popular Month:', popular_month)
+        pop_month = df['month'].mode()[0]
+        pop_month = calendar.month_name[pop_month] #converting month number to month name
+        print('Most Popular Month:', pop_month)
 
     #filter by day of week if applicable
     if day != 'All':
         df = df[df['day_of_week'] == day]
     else:
-        popular_day = df['day_of_week'].mode()[0]
-        print('Most Popular Day of Week:', popular_day)
+        pop_day = df['day_of_week'].mode()[0]
+        print('Most Popular Day of Week:', pop_day)
 
     #calculate most popular start hour
-    popular_hour = df['hour'].mode()[0]
-    print('Most Frequent Start Hour:', popular_hour)
+    pop_hour = df['hour'].mode()[0]
+    print('Most Frequent Start Hour:', pop_hour)
 
     #calculate most popular start and end stations, and combination of start and end stations
-    popular_start = df['Start Station'].mode()[0]
-    print('Most Popular Start Station:', popular_start)
+    pop_start = df['Start Station'].mode()[0]
+    print('Most Popular Start Station:', pop_start)
 
-    popular_end = df['End Station'].mode()[0]
-    print('Most Popular End Station:', popular_end)
+    pop_end = df['End Station'].mode()[0]
+    print('Most Popular End Station:', pop_end)
 
-    popular_combo = df['combo_station'].mode()[0]
-    print('Most Popular Combination of Start and End Stations:', popular_combo)
+    pop_combo = df['combo_station'].mode()[0]
+    print('Most Popular Combination of Start and End Stations:', pop_combo)
 
     #calculate total trip time and average trip time
     total_time = round(df['Trip Duration'].sum()/8640)
